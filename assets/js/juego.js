@@ -73,7 +73,7 @@ const turnoComputadora = (puntosMinimos) => {
     divCartasComputadora.append(imgCarta);
 
     if (puntosMinimos > 21) {
-      break;
+      break; 
     }
   } while (puntosComputadora < puntosMinimos && puntosMinimos <= 21);
 
@@ -84,8 +84,10 @@ const turnoComputadora = (puntosMinimos) => {
       alert("Computadora gana");
     } else if (puntosJugador === 21) {
       alert("Jugador gana");
-    } else {
-      alert("Computadora Gana");
+    } else if (puntosComputadora > 21) {
+      alert("Jugador gana");
+    } else if (puntosComputadora > puntosJugador && puntosComputadora <= 21) {
+      alert("Computadora gana")
     }
   }, 250);
 };
